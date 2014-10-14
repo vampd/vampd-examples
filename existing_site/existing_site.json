@@ -1,0 +1,32 @@
+{
+  "name": "existing_site",
+  "description": "The base role that gets added to every machine.",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {},
+  "override_attributes": {
+   "drupal": {
+      "sites": {
+        "existing_site": {
+          "active": true,
+          "deploy": {
+            "action": ["deploy", "install"]
+          },
+          "drupal": {
+            "settings" :{
+              "settings": {
+                "default": {
+                  "location": "sites/default/settings.php"
+                },
+                "development": {
+                  "location": "sites/all/settings.dev.php"
+                }
+              },
+              "db_file": "/vagrant/chef/roles/existing_site/existing_site.sql"
+            }
+          }
+        }
+      }
+    }
+  }
+}
