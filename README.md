@@ -7,4 +7,4 @@ in the vampd eco system.
 Study the examples and see what you can do with them. If you like to provide an
 example for use, please submit a pull request. We would love for this to grow.
 
-To see more what is possible with the drupal recipe, please visit [Drupal](http://github.com/vampd/drupal].
+To see more what is possible with the drupal recipe, please visit [Drupal](http://github.com/vampd/drupal).
