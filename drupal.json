@@ -1,0 +1,19 @@
+{
+  "name": "drupal",
+  "description": "This role is vanilla drupal with a standard install",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {},
+  "override_attributes": {
+   "drupal": {
+      "sites": {
+        "drupal": {
+          "active": true,
+          "deploy": {
+            "action": ["deploy", "install"]
+          }
+        }
+      }
+    }
+  }
+}

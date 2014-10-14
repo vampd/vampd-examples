@@ -1,0 +1,40 @@
+{
+  "name": "commerce_kickstart",
+  "description": "This commerce kickstart role uses make and an install profile to install vanilla commerce kickstart.",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {},
+  "override_attributes": {
+    "drupal": {
+      "sites": {
+        "commerce_kickstart": {
+          "active": true,
+          "deploy": {
+            "action": ["deploy", "install"]
+          },
+          "drush_make": {
+            "api": "2",
+            "files": {
+              "default": "build-commerce-kickstart.make",
+              "core": "drupal-org-core.make"
+            },
+            "arguments": [
+              "--working-copy"
+            ],
+            "template": false
+          },
+          "drupal": {
+            "settings": {
+              "profile": "commerce_kickstart"
+            }
+          },
+          "repository": {
+            "host": "github.com",
+            "uri": "https://github.com/commerceguys/commerce_kickstart",
+            "revision": "7.x-2.x"
+          }
+        }
+      }
+    }
+  }
+}
