@@ -9,10 +9,8 @@
       "sites": {
         "drupal": {
           "active": true,
-          "drupal": {
-            "settings": {
-              "docroot": ""
-            }
+          "deploy": {
+            "action": ["deploy", "install"]
           }
         }
       }
