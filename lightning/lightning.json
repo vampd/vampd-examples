@@ -21,7 +21,8 @@
           },
           "drupal": {
             "settings": {
-              "profile": "lightning"
+              "profile": "lightning",
+              "docroot": ""
             }
           },
           "repository": {

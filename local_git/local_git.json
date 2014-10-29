@@ -1,0 +1,35 @@
+{
+  "name": "local_git",
+  "description": "This local git import and updates a site you have locally.",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {},
+  "override_attributes": {
+    "drupal": {
+      "sites": {
+        "local_git": {
+          "settings" :{
+            "docroot": "",
+            "settings": {
+              "default": {
+                "location": "sites/default/settings.php"
+              },
+              "development": {
+                "location": "sites/all/settings.dev.php"
+              }
+            },
+            "db_file": "/vagrant/sites/local_git/db/existing_site.sql"
+          },
+          "repository": {
+            "host": "",
+            "uri": "/vagrant/sites/local_git/code/.git",
+            "revision": "master",
+            "remotes": {
+              "upstream": "git@github.com:drupal/drupal.git"
+            }
+          }
+        }
+      }
+    }
+  }
+}
