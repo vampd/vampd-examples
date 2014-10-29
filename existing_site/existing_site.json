@@ -1,6 +1,6 @@
 {
   "name": "existing_site",
-  "description": "The base role that gets added to every machine.",
+  "description": "The existing site role",
   "chef_type": "role",
   "json_class": "Chef::Role",
   "default_attributes": {},
@@ -10,10 +10,11 @@
         "existing_site": {
           "active": true,
           "deploy": {
-            "action": ["deploy", "install"]
+            "action": ["deploy", "import", "update"]
           },
           "drupal": {
             "settings" :{
+              "docroot": "",
               "settings": {
                 "default": {
                   "location": "sites/default/settings.php"

@@ -11,6 +11,9 @@
           "active": true,
           "deploy": {
             "action": ["deploy", "install"]
+          },
+          "settings": {
+            "docroot": ""
           }
         }
       }

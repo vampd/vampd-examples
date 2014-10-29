@@ -25,7 +25,8 @@
           },
           "drupal": {
             "settings": {
-              "profile": "commerce_kickstart"
+              "profile": "commerce_kickstart",
+              "docroot": ""
             }
           },
           "repository": {
