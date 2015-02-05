@@ -1,0 +1,34 @@
+{
+  "name": "existing_drupal_6",
+  "description": "The role for my Openexisting_drupal_6 installation",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {},
+  "override_attributes": {
+    "drupal": {
+      "sites": {
+        "existing_drupal_6": {
+          "active": true,
+          "deploy": {
+            "action": ["deploy", "import"]
+          },
+          "drupal": {
+            "settings": {
+              "docroot": "",
+              "db_file": "/assets/existing_drupal_6/existing_drupal_6.mysql"   
+            },
+            "version": "6.x"
+          },
+          "drupal_user": {
+            "admin_user": "admin"
+          },
+          "repository": {
+            "host": "github.com",
+            "uri": "[existing_drupal_6 remote repository uri]",
+            "revision": "master"
+          }
+        }
+      }
+    }
+  }
+}
