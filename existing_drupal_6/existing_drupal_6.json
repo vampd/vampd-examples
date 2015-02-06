@@ -1,6 +1,6 @@
 {
   "name": "existing_drupal_6",
-  "description": "The role for my Openexisting_drupal_6 installation",
+  "description": "The role for the existing Drupal 6 site",
   "chef_type": "role",
   "json_class": "Chef::Role",
   "default_attributes": {},
