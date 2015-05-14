@@ -1,0 +1,38 @@
+{
+  "name": "dev_testing",
+  "description": "This dev_testing role uses make and an install profile to install vanilla the vanilla dev_testing profile.",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {},
+  "override_attributes": {
+    "drupal": {
+      "sites": {
+        "dev_testing": {
+          "active": true,
+          "deploy": {
+            "action": ["deploy", "install"]
+          },
+          "drush_make": {
+            "api": "2",
+            "files": {
+              "default": "build-dev_testing.make",
+              "core": "drupal-org-core.make"
+            },
+            "template": false
+          },
+          "drupal": {
+            "settings": {
+              "profile": "dev_testing",
+              "docroot": ""
+            }
+          },
+          "repository": {
+            "host": "drupal.org",
+            "uri": "http://git.drupal.org/sandbox/timodwhit/2488718.git",
+            "revision": "7.x-1.x"
+          }
+        }
+      }
+    }
+  }
+}
