@@ -1,6 +1,6 @@
 {
   "name": "dev_testing",
-  "description": "This dev_testing role uses make and an install profile to install vanilla the vanilla dev_testing profile.",
+  "description": "This dev_testing role uses make and an install profile to install the dev_testing profile.",
   "chef_type": "role",
   "json_class": "Chef::Role",
   "default_attributes": {},
